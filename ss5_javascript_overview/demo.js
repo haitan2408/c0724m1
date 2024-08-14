@@ -7,5 +7,4 @@ function clickMe() {
     /* Lệnh bên dưới dùng để thay đổi nội dung của thẻ có id là like */
     document.getElementById("like").innerText = "dislike";
 
-
 }
