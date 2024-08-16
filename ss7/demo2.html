@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let point = +prompt("Mời bạn nhập điểm của học sinh: ")
+    if(point <=10 && point >=0 && !isNaN(point)) { //is not a number
+        if(point >=8) {
+            alert("Học sinh giỏi")
+        } else if(point >=6.5) {
+            alert("Học sinh khá")
+        } else if(point >=5) {
+            alert("Học sinh trung bình")
+        } else if(point >=3.5) {
+            alert("Học sinh yếu")
+        } else {
+            alert("Học sinh kém")
+        }
+    } else {
+        alert("Người dùng nhập sai điểm")
+    }
+
+
+//     Còn thiếu trường hợp nào cần phải kiểm tra không? 200 point
+</script>
+</body>
+</html>
