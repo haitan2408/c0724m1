@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    // for(let i = 1; i <= 7 ; i++) {
+    //     //     Hiển thị các thứ trong tuần
+    //     if(i === 1) {
+    //         alert("Đây là chủ nhật")
+    //     } else {
+    //         alert(`Đây là thứ ${i}`)
+    //     }
+    // }
+
+    //     Hiển thị thông báo số nào là số lẻ, số nào là số chẵn từ 1 đến 10
+    //     for(let i = 1; i<=10; i++) {
+    //         if(i%2===0) {
+    //             alert(`${i} là số chẵn`)
+    //         } else {
+    //             alert(`${i} là số lẻ`)
+    //         }
+    //     }
+
+    //     Đặt lính canh
+    //     Kiểm tra 1 số có phải là số nguyên tố hay không
+    //     B1: khai báo 1 biến đếm count dùng để đếm số lượng số chia hết
+    //     B2: vòng lặp chạy từ 1 đến n (với n là số chúng ta nhập từ bàn phím)
+    //     B3: kiểm tra nếu n%i ===0 thì count tăng lên 1
+    //     B4: kết thúc vòng lặp thì kiểm tra count có bằng 2 hay không.
+    //     Nếu bằng 2 thì số đó là số nguyên tố
+    //     Nam 300
+    //     Chi 300
+    //     Anh 300
+    //     Quân 300
+    //     Huỳnh Đức 300
+    //     Thiên Ân 300
+
+    // let count = 0;
+    // let num = +prompt("Mời bạn nhập num")
+    // if(num >=2 && !isNaN(num) && parseInt(num) === num) {
+    //     for(let i = 1; i<= num; i++) {
+    //         if(num%i ===0) {
+    //             count++;
+    //         }
+    //     }
+    //     if(count === 2) {
+    //         alert(`${num} là số nguyên tố`)
+    //     } else {
+    //         alert(`${num} không phải là số nguyên tố`)
+    //     }
+    // } else {
+    //     alert("Num không đủ điều kiện để kiểm tra")
+    // }
+
+    //     Bổ sung chức năng cho phép người dùng nhập lại cho đến khi đúng
+    // let count = 0;
+    // let num;
+    // do {
+    //     num = +prompt("Mời bạn nhập num")
+    // } while (!(num >= 2 && !isNaN(num) && parseInt(num) === num))
+    //
+    // for (let i = 1; i <= num; i++) {
+    //     if (num % i === 0) {
+    //         count++;
+    //     }
+    // }
+    // if (count === 2) {
+    //     alert(`${num} là số nguyên tố`)
+    // } else {
+    //     alert(`${num} không phải là số nguyên tố`)
+    // }
+
+    //
+    // while(!die) {
+    //     //Sáng ăn
+    //     //Trưa ăn
+    //     //Tối ăn
+    // }
+    // alert("XUống mồ")
+
+    // let num = +prompt("Mời bạn nhập num")
+    //
+    // while (!(num >= 2 && !isNaN(num) && parseInt(num) === num)) {
+    //     num = +prompt("Bạn đã nhập sai num. yêu cầu nhập lại: ")
+    // }
+
+//     Tối ưu thuật toán
+    let count = 0;
+    let num;
+    do {
+        num = +prompt("Mời bạn nhập num")
+    } while (!(num >= 2 && !isNaN(num) && parseInt(num) === num))
+
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            count++;
+            break;
+        }
+
+    }
+    if (count === 0) {
+        alert(`${num} là số nguyên tố`)
+    } else {
+        alert(`${num} không phải là số nguyên tố`)
+    }
+
+//
+
+
+</script>
+</body>
+</html>
