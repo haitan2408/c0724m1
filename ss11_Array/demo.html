@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let diemToan = 10;
+    // let diemVan = 9;
+//     10 bộ môn của 10 học sinh
+//     Số lượng biến cần khai báo
+//     let scoreOfHai = [10, 9, 7, 9, 10];
+    // let scoreOfHai = Array(5)
+    //Khởi tạo 1 mảng có 5 phần tử => giá trị mặc định của 5 phần tử đó là gì?
+    // console.log(scoreOfHai)
+
+    let scoreOfHai = [12, 9, 7, 9, 10];
+
+    // Thêm vào cuối
+    scoreOfHai.push(7);
+
+    // Thêm vào đầu mảng
+    scoreOfHai.unshift(5);
+
+    console.log(scoreOfHai)
+
+    // Xóa cuối mảng
+    scoreOfHai.pop();
+
+    // Xóa đầu mảng
+    scoreOfHai.shift()
+
+    // Xóa và thêm ở vị trí bất kỳ
+    scoreOfHai.splice(2, 0, 3, 4)
+
+    scoreOfHai[2] = 0;
+
+    console.log(scoreOfHai)
+
+//     Sắp xếp
+    scoreOfHai.sort(function (a,b) {
+        return b - a;
+    });
+    console.log(scoreOfHai)
+// for - i (for index)
+//     Hiển thị tất cả điểm của học sinh Haitt
+    for(let i = scoreOfHai.length-1; i >=0; i--) {
+        document.writeln(scoreOfHai[i]);
+    }
+    document.write("<br>")
+    // for-in
+    for(let i in scoreOfHai) {
+        document.writeln(scoreOfHai[i])
+    }
+    document.write("<br>")
+//     for-of
+    for (let item of scoreOfHai) {
+        document.writeln(item)
+    }
+
+
+</script>
+</body>
+</html>
