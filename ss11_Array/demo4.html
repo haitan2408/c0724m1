@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let arr
+    // let arr = [1,2,3]
+    // console.log(arr)
+    // var a = 5;
+    // if(a >3) {
+    //     let b = 5;
+    // }
+    // console.log(b)
+
+    let num = +prompt("Mời bạn nhập số cần tính")
+    // Chuyển num thành số nguyên. 3.4 => 3 === 3.4 => false
+    while (!(parseInt(num) === num && num >0)) {
+        num = +prompt("Số bạn nhập không phải là số nguyên dương. Nhập lại: ")
+    }
+    // 6! = 6 * 5* 4 * 3 * 2 * 1
+    let temp = 1;
+    for(let i = num; i >=1; i--) {
+        temp*=i; // temp = temp * i
+    }
+    console.log(temp)
+</script>
+
+</body>
+</html>
