@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+class Product {
+    code;
+    name;
+    price;
+    description;
+    nsx;
+    constructor(code, name, price, description, nsx) {
+        this.code = code;
+        // chocopie.code = code (PO-001)
+        this.name = name;
+        this.price = price;
+        this.description = description;
+        this.nsx = nsx;
+    }
+
+    sale(percent) {
+        if(this.price > 10000) {
+            this.price = this.price*(1 - percent);
+        }
+    }
+}
+
+let chocopie = new Product("PO-001", "Chocopie", 20000, "Bánh siêu ngon", "Hà Nội");
+alert(chocopie.price);
+chocopie.sale(0.2);
+alert(chocopie.price)
+
+let milk = new Product();
+milk.code = "PO-002"
+milk.name="Sữa tươi tiệt trùng"
+milk.price= 100000;
+milk.sale(0.05)
+
+console.log(milk.price)
+</script>
+</body>
+</html>
