@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    <!--    Kiểm tra 1 số có phải là số nguyên tố hay không-->
+    function isPrime(number) {
+        if (number < 2) return false;
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i === 0) return false;
+        }
+        return true;
+    }
+
+    // Hiển thị các số nguyên tố nhỏ hơn 100
+    function displayPrime() {
+        let num = 2;
+        while(num < 100) {
+            if (isPrime(num)) {
+                alert(`${num} là số nguyên tố`)
+            } else {
+                alert(`${num} không phải là số nguyên tố`)
+            }
+            num++;
+        }
+    }
+
+    // Hiển thị 20 số nguyên tố đầu tiên
+
+
+</script>
+</body>
+</html>

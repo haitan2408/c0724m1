@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let star1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let star2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+
+    function findStar(arr1, arr2) {
+        let input = prompt('Input your star');
+        let isFind = false;
+        for (let i = 0; i < arr1.length; i++) {
+            if (input === arr1[i]) {
+                alert(`ngoi sao tuong ung la ${arr2[i]}`);
+                isFind = true;
+                break;
+            }
+        }
+        if (isFind) {
+            alert("Can't find this star");
+        }
+    }
+
+    findStar(star1, star2);
+</script>
+</body>
+</html>

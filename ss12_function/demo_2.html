@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    <!--    Đổi giá trị của 2 biến. -->
+    // Ví dụ như ban đầu a = 5, b = 7
+    // Sau khi sử dụng hàm swap thì sẽ thành a = 7 và b = 5
+
+    // function swap(a, b) {
+    //     let temp = a;
+    //     a = b;
+    //     b = temp;
+    // }
+    //
+    // let x = 5;
+    // let y = 7;
+    // swap(x, y);
+    // document.writeln(x)
+    // document.writeln(y)
+
+    function swap(arr) {
+        let temp = arr[0];
+        arr[0] = arr[1];
+        arr[1] = temp;
+    }
+
+    let array = [5,7];
+    swap(array);
+    document.writeln(array)
+</script>
+</body>
+</html>
