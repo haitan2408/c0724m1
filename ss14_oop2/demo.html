@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Person {
+        id;
+        name;
+        address;
+
+        constructor(id, name, address) {
+            this.id = id;
+            this.name = name;
+            this.address = address;
+        }
+    }
+
+    class Student extends Person {
+        point;
+        constructor(id, name, address, point) {
+           // gọi constructor của lớp cha để khởi tạo các giá trị id, name và address
+            super(id, name, address);
+            this.point = point
+
+        }
+    }
+
+    let st = new Student(1, "HaiTT", "Quảng Nam", 9);
+    document.writeln(st.name)
+</script>
+</body>
+</html>

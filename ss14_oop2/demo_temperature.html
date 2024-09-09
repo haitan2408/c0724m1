@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        degreesCelsius;
+
+        constructor(degreesCelsius) {
+            this.degreesCelsius = degreesCelsius
+        }
+
+        convertToF() {
+            return 1.8*this.degreesCelsius + 32;
+        }
+
+        convertToK() {
+            return this.degreesCelsius + 273.15;
+        }
+    }
+</script>
+</body>
+</html>
