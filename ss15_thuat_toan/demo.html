@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function commonCharacterCount(s1, s2) {
+    //     let count = 0;
+    //
+    //     // chuyển string thành mảng vì string là bất biến
+    //     // aabccd và ade
+    //     let s2Array = s2.split('');
+    //
+    //     for (let char of s1) {
+    //         // indexOf cho phép kiểm tra 1 phần tử có trong mảng hay không
+    //         let index = s2Array.indexOf(char);
+    //
+    //         if (index !== -1) {
+    //             count++;
+    //             s2Array.splice(index, 1);
+    //         }
+    //     }
+    //
+    //     return count;
+    // }
+    //
+    // const s1 = "aabcc";
+    // const s2 = "adcaa";
+    // console.log(commonCharacterCount(s1, s2));
+    function commonCharacterCount(a, d) {
+        let g = [];
+        let count2 = 0;
+        for (let i=0; i<a.length; i++) {
+            for (let j=0; j < d.length; j++) {
+                if (a[i]===d[j]) {
+                    count2++
+                    g.push(a[i])
+                    break;
+                }
+            }
+        }
+        document.write(count2)
+        document.write('<br>')
+        document.write(g)
+    }
+    commonCharacterCount("aaa","abcd")
+</script>
+</body>
+</html>

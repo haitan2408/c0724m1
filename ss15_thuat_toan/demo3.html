@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isBeautifulArray(arr) {
+        const arrayLength = arr.length;
+        // Trường hợp mảng có ít hơn 3 phần tử thì không thể chia thành 2 phần không rỗng
+        if (arrayLength < 3) {
+            return false;
+        }
+        // Tính tổng của toàn bộ mảng// reduce js
+        const totalSum = arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        // Tổng bên trái
+        let leftSum = 0;
+        for (let i = 0; i < arrayLength; i++) {
+            // Tổng bên phải
+            const rightSum = totalSum - leftSum - arr[i];
+            // Check tổng hai bên có bằng nhau không? Nếu true => mảng đẹp
+            if (leftSum === rightSum) {
+                return true;
+            }
+            // Update tổng bên trái
+            leftSum += arr[i];
+        }
+        return false;
+    }
+
+    const arr1 = [1, 2, 3, 2, 1];
+    const arr2 = [1, 2, 3, 3];
+    console.log(isBeautifulArray(arr1));
+    console.log(isBeautifulArray(arr2));
+</script>
+</body>
+</html>

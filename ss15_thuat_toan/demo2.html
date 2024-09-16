@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm Giá Trị Trùng Nhau</title>
+</head>
+<body>
+<h3>Nhập chuỗi 1</h3>
+<input type="text" id="chuoi1">
+<h3>Nhập chuỗi 2</h3>
+<input type="text" id="chuoi2">
+<br>
+<br>
+<button onclick="timGiaTri()">Tìm Giá Trị</button>
+<script>
+    timGiaTri = () => {
+        let ketQua = [];
+        let chuoi1 = document.getElementById('chuoi1').value.split('');
+        let chuoi2 = document.getElementById('chuoi2').value.split('');
+        ketQua = soSanh(chuoi1, chuoi2);
+        console.log(ketQua)
+    }
+
+    soSanh = (mang1, mang2) => {
+        let size1 = mang1.length;
+
+        let result = [];
+        // aabc với aacde
+        for (let i = 0; i < size1; i++) {
+            let size2 = mang2.length;
+            for (let j = 0; j < size2; j++) {
+                if (mang1[i] == mang2[j]) {
+                    result.push(mang1[i]);
+                    mang2.splice(j, 1);
+                    break;
+                }
+            }
+
+        }
+        return result;
+    }
+</script>
+</body>
+</html>
